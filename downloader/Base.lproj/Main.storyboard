@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fWB-ou-bv2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="downloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Vl0-yy-kcn">
+            <objects>
+                <tableViewController id="fWB-ou-bv2" customClass="TableViewController" customModule="downloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GNa-CL-eOD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="downloadItemCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="downloadItemCell" id="FoX-90-mxt" customClass="TableViewCell" customModule="downloader" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FoX-90-mxt" id="JUc-GR-0XZ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4QK-hh-1gc">
+                                            <rect key="frame" x="0.0" y="0.0" width="25" height="44"/>
+                                            <color key="backgroundColor" red="0.20457933767737752" green="0.90798593072033429" blue="0.44244895256463007" alpha="0.41999999999999998" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" id="yDC-xR-pcH"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="yDC-xR-pcH"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NG-0G-lsW">
+                                            <rect key="frame" x="17" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btE-OO-cRL">
+                                            <rect key="frame" x="541" y="8" width="46" height="30"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="toggleDownloadStatus:" destination="FoX-90-mxt" eventType="touchUpInside" id="Isq-oy-tqU"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="btE-OO-cRL" firstAttribute="leading" secondItem="4QK-hh-1gc" secondAttribute="trailing" id="3oQ-Bd-gQ2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4QK-hh-1gc" secondAttribute="trailing" constant="-8" id="9uH-mH-8UQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="btE-OO-cRL" secondAttribute="trailing" constant="5" id="OqZ-xy-xTD"/>
+                                        <constraint firstItem="7NG-0G-lsW" firstAttribute="leading" secondItem="JUc-GR-0XZ" secondAttribute="leadingMargin" constant="9" id="RP5-S6-1ho"/>
+                                        <constraint firstItem="4QK-hh-1gc" firstAttribute="top" secondItem="JUc-GR-0XZ" secondAttribute="topMargin" constant="-8" id="T7c-fS-cZL"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="7NG-0G-lsW" secondAttribute="trailing" constant="100" id="TTT-FB-Fd9"/>
+                                        <constraint firstItem="btE-OO-cRL" firstAttribute="top" secondItem="JUc-GR-0XZ" secondAttribute="topMargin" id="VcX-vo-waI"/>
+                                        <constraint firstItem="7NG-0G-lsW" firstAttribute="top" secondItem="JUc-GR-0XZ" secondAttribute="topMargin" constant="3" id="Wnj-hv-OsT"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4QK-hh-1gc" secondAttribute="bottom" constant="-8" id="rLn-kW-zUh"/>
+                                        <constraint firstItem="4QK-hh-1gc" firstAttribute="leading" secondItem="JUc-GR-0XZ" secondAttribute="leadingMargin" constant="-8" id="vRU-tt-B9K"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="9uH-mH-8UQ"/>
+                                            <exclude reference="T7c-fS-cZL"/>
+                                            <exclude reference="rLn-kW-zUh"/>
+                                            <exclude reference="vRU-tt-B9K"/>
+                                            <exclude reference="3oQ-Bd-gQ2"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="controlButton" destination="btE-OO-cRL" id="b8N-5s-b6o"/>
+                                    <outlet property="percentView" destination="4QK-hh-1gc" id="qeY-22-f5S"/>
+                                    <outlet property="title" destination="7NG-0G-lsW" id="8dx-eM-3nu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fWB-ou-bv2" id="jXV-j0-kaJ"/>
+                            <outlet property="delegate" destination="fWB-ou-bv2" id="J61-PR-twP"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="plr-l3-DXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="372"/>
+        </scene>
+    </scenes>
+</document>
